@@ -15,12 +15,12 @@ interface Product {
 
 interface PageProps {
   params: {
-    slug: string;
+    slug: any;
   };
 }
 
-export default async function SingleProductPage({ params }: PageProps) {
-  const { slug } = await params;
+export default async function SingleProductPage({ params }: any) {
+  const { slug } = params;
   const apolloClient = getClient();
 
   // Fetch product data using Apollo Client
