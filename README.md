@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce Website
 
-## Getting Started
+## URL : [Ecom](https://e-comm-frontend-2pmy.vercel.app/)
 
-First, run the development server:
+A responsive and feature-rich e-commerce platform built with modern web technologies, designed to deliver a seamless shopping experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![](./public/site-img.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **TypeScript**: Static typing for enhanced developer experience.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **ShadCN/UI**: Modular UI components for clean and consistent design.
 
-## Learn More
+### State Management
 
-To learn more about Next.js, take a look at the following resources:
+- **Zustand**: Lightweight state management for managing application state.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Backend/Data Source
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Sanity CMS**: Headless CMS for managing and querying data.
+- **GraphQL with Apollo Client**: For fetching data from Sanity CMS.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Core Features
+
+- **Responsive Design**: Optimized for all screen sizes, from mobile to desktop.
+- **Clean UI**: Intuitive and visually appealing user interface.
+- **Pagination**: Efficiently handle large lists of products.
+- **Add to Cart**: Add and manage items in a shopping cart.
+- **CSS Transitions**: Smooth animations for an enhanced user experience.
+
+### Product Information
+
+Fetched from Sanity CMS via GraphQL:
+
+- Product Name
+- Product Image
+- Short Description
+- Price
+- Discount
+- Is New
+- Category
+- Reviews
+
+---
