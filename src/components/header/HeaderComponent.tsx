@@ -13,7 +13,7 @@ import { useCartStore } from "@/store/cartStore";
 const HeaderComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { cart } = useCartStore();
-  console.log("cart.length ", cart.length);
+
   const pathName = usePathname();
 
   return (
@@ -25,7 +25,7 @@ const HeaderComponent = () => {
       />
       <section className="flex justify-between items-center  flex-1">
         <aside>
-          <Link href="/">Logo</Link>
+          <Link href="/">E-Comm</Link>
         </aside>
         <aside className="md:flex gap-6 cursor-pointer hidden">
           <HeartIcon />
