@@ -35,6 +35,7 @@ A responsive and feature-rich e-commerce platform built with modern web technolo
 - **Pagination**: Efficiently handle large lists of products.
 - **Add to Cart**: Add and manage items in a shopping cart.
 - **CSS Transitions**: Smooth animations for an enhanced user experience.
+- **Dark Theme and Light Theme**: Smooth animations for an enhanced user experience.
 
 ### Product Information
 
