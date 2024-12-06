@@ -8,4 +8,5 @@ export const metadata: Metadata = {
 };
 
 const ProductsPage = () => <ProductsComponent />;
+
 export default ProductsPage;

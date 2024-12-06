@@ -1,6 +1,7 @@
 import { GET_PRODUCT_BY_SLUG } from "@/quaries/quaries";
 import { getClient } from "@/lib/apollo-client";
 import ProductPage from "@/components/product-page/ProductPage";
+import { BreadcrumbWithCustomSeparator } from "@/components/BreadcrumbWithCustom";
 
 interface Product {
   title: string;
@@ -35,6 +36,7 @@ export default async function SingleProductPage({ params }: any) {
 
   return (
     <section className="container py-16 ">
+      <BreadcrumbWithCustomSeparator navText={"Single Product"} />
       <ProductPage {...product} />
     </section>
   );

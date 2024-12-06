@@ -1,13 +1,15 @@
 "use client";
 import Image from "next/image";
 import { useCartStore } from "@/store/cartStore";
+import { BreadcrumbWithCustomSeparator } from "@/components/BreadcrumbWithCustom";
 
 const CartPage = () => {
   const { cart, clearCart, removeFromCart } = useCartStore();
 
   return (
-    <section className="container p-6">
-      <h2 className="text-2xl font-bold mb-4">Your Cart</h2>
+    <section className="container p-6 ">
+      <BreadcrumbWithCustomSeparator navText={"Cart"} />
+      <h2 className="text-2xl font-bold my-4">Your Cart</h2>
       {cart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (

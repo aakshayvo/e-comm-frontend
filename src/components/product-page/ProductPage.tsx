@@ -1,3 +1,5 @@
+"use client";
+import { useCartStore } from "@/store/cartStore";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 
@@ -22,10 +24,24 @@ const ProductPage: React.FC<ProductProps> = ({
   description,
   reviews,
   discountedPrice,
+  slug,
   price,
 }) => {
+  const { addToCart } = useCartStore();
+
+  const handleAddToCart = () => {
+    addToCart({
+      title,
+      imageUrl,
+      slug,
+      price,
+      discountedPrice,
+      category,
+      reviews,
+    });
+  };
   return (
-    <section className="flex flex-col lg:items-start md:items-center lg:flex-row gap-8 ">
+    <section className="flex flex-col lg:items-start md:items-center lg:flex-row gap-8 my-4">
       <div className="w-full sm:w-[400px] h-[300px]  md:h-[500px] relative">
         <Image src={imageUrl} alt={title} layout="fill" objectFit="contain" />
       </div>
@@ -54,7 +70,10 @@ const ProductPage: React.FC<ProductProps> = ({
           </h3>
         </div>
         <div className=" flex flex-wrap  items-center p-2 mt-10">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full mr-3 mt-2">
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full mr-3 mt-2"
+            onClick={handleAddToCart}
+          >
             Add To Cart
           </button>
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-8 border border-blue-500 hover:border-transparent rounded-full mt-2">

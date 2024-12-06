@@ -1,7 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-// Define the types for the cart and wishlist
 export type Product = {
   title: string;
   imageUrl: string;
@@ -47,7 +46,7 @@ export const useCartStore = create<CartState>()(
         })),
     }),
     {
-      name: "cart-storage", // Key in localStorage
+      name: "cart-storage",
     }
   )
 );
