@@ -14,7 +14,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   return (
     <nav
-      className={`flex flex-1 flex-col md:flex-row gap-6 absolute md:static top-14 left-0 right-0 bg-white md:bg-transparent   text-black text-center z-10 ${
+      className={`flex flex-1 flex-col md:flex-row gap-6 absolute md:static top-14 left-0 right-0 bg-white md:bg-transparent md:dark:text-white dark:text-black text-black  text-center z-10 ${
         isMenuOpen ? "block" : "hidden md:flex"
       } md:p-0 p-4`}
     >

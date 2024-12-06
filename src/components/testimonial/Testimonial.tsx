@@ -29,8 +29,8 @@ const Testimonial = () => {
             <Image
               className="rounded-full"
               src={user_icon}
-              width={80}
-              height={80}
+              width="80"
+              height="80"
               alt={user_alt}
               layout="intrinsic"
             />
@@ -41,8 +41,8 @@ const Testimonial = () => {
             <Image
               className="py-2 inline-block"
               src={user_favIcon}
-              width={30}
-              height={30}
+              width="30"
+              height="30"
               alt={favIcon_alt}
             />
             <p className="max-w-[200px] text-gray-500">{user_thought}</p>

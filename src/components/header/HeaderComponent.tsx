@@ -9,6 +9,7 @@ import { useState } from "react";
 import NavLink from "./navlink/NavLink";
 import { usePathname } from "next/navigation";
 import { useCartStore } from "@/store/cartStore";
+import { ModeToggle } from "./ToggleComponent";
 
 const HeaderComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,11 +28,16 @@ const HeaderComponent = () => {
         <aside>
           <Link href="/">E-Comm</Link>
         </aside>
-        <aside className="md:flex gap-6 cursor-pointer hidden">
+        <aside className="md:flex gap-6 cursor-pointer hidden items-center">
+          <ModeToggle />
           <HeartIcon />
           <PersonIcon />
         </aside>
       </section>
+      <div className="block md:hidden mr-1">
+        <ModeToggle />
+      </div>
+
       <button
         className="md:hidden block"
         onClick={() => setIsMenuOpen((prev) => !prev)}
