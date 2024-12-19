@@ -14,7 +14,9 @@ const SlideComponent: React.FC<propsType> = ({ img }) => {
           src={img}
           alt={img}
           fill
-        ></Image>
+          placeholder="blur"
+          blurDataURL={img}
+        />
       </section>
     </section>
   );

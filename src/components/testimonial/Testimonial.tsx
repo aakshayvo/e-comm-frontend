@@ -27,22 +27,21 @@ const Testimonial = () => {
         <aside className="border border-gray-300 rounded-2xl grid place-items-center p-6 lg:p-0">
           <div className="text-center flex flex-col items-center gap-1">
             <Image
-              className="rounded-full"
+              className="rounded-full h-auto w-auto"
               src={user_icon}
-              width="80"
-              height="80"
+              width={80}
+              height={80}
               alt={user_alt}
-              layout="intrinsic"
             />
             <h2 className="text-gray-500 font-black text-[20px]">
               {user_name}
             </h2>
             <p className="max-w-[200px] text-gray-500">{user_pro}</p>
             <Image
-              className="py-2 inline-block"
+              className="py-2 inline-block h-8 w-8"
               src={user_favIcon}
-              width="30"
-              height="30"
+              width={0}
+              height={0}
               alt={favIcon_alt}
             />
             <p className="max-w-[200px] text-gray-500">{user_thought}</p>
