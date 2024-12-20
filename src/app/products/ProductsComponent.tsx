@@ -5,21 +5,7 @@ import { useQuery } from "@apollo/client";
 import { useState } from "react";
 import Loading from "../loading";
 import { PRODUCT_QUERY } from "@/quaries/quaries";
-
-interface Product {
-  _id: string;
-  title: string;
-  description: string;
-  slug: {
-    current: string;
-  };
-  price: number;
-  discountedPrice?: number;
-  isNew: boolean;
-  category: string;
-  imageUrl: string;
-  reviews: number;
-}
+import { Product } from "@/interfaces/Props";
 
 export default function ProductsComponent() {
   const [currentPage, setCurrentPage] = useState(1);

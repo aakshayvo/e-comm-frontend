@@ -2,20 +2,7 @@
 import { useCartStore } from "@/store/cartStore";
 import { StarFilledIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
-
-interface ProductProps {
-  title: string; // Title of the product
-  imageUrl: string;
-  slug: {
-    current: string;
-  };
-  price: number;
-  discountedPrice?: number;
-  isNew: boolean;
-  category: string;
-  reviews: number;
-  description: string;
-}
+import { ProductProps } from "@/interfaces/Props";
 
 const ProductPage: React.FC<ProductProps> = ({
   imageUrl,
@@ -42,8 +29,18 @@ const ProductPage: React.FC<ProductProps> = ({
   };
   return (
     <section className="flex flex-col lg:items-start md:items-center lg:flex-row gap-8 my-4">
-      <div className="w-full sm:w-[400px] h-[300px]  md:h-[500px] relative">
-        <Image src={imageUrl} alt={title} layout="fill" objectFit="contain" />
+      <div
+        className="w-full sm:w-[400px] h-[300px]  md:h-[400px] relative  {
+        
+      }"
+      >
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          priority
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        />
       </div>
 
       <div className="flex-1  h-full">

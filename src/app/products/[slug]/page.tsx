@@ -21,7 +21,7 @@ interface PageProps {
 }
 
 export default async function SingleProductPage({ params }: any) {
-  const { slug } = params;
+  const { slug } = await params;
   const apolloClient = getClient();
 
   // Fetch product data using Apollo Client

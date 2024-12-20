@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import CartPage from "./CartPage";
-import { BreadcrumbWithCustomSeparator } from "@/components/BreadcrumbWithCustom";
 
 export const metadata: Metadata = {
   title: "Your Shopping Cart",

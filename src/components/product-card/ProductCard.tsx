@@ -1,20 +1,8 @@
 import { useCartStore } from "@/store/cartStore";
-import { HeartIcon, StarIcon, StarFilledIcon } from "@radix-ui/react-icons";
+import { HeartIcon, StarFilledIcon } from "@radix-ui/react-icons";
 import Image from "next/image";
 import Link from "next/link";
-
-interface ProductCardProps {
-  title: string;
-  imageUrl: string;
-  slug: {
-    current: string;
-  };
-  price: number;
-  discountedPrice?: number;
-  isNew: boolean;
-  category: string;
-  reviews: number;
-}
+import { ProductCardProps } from "@/interfaces/Props";
 
 const ProductCard: React.FC<ProductCardProps> = ({
   title,
@@ -49,6 +37,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             src={imageUrl}
             alt={title}
             fill
+            priority
             className="object-contain rounded-lg"
             sizes="(max-width: 640px) 100vw, 320px"
           />

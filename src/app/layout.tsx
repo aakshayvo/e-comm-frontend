@@ -7,6 +7,12 @@ import "slick-carousel/slick/slick.css";
 import "@radix-ui/themes/styles.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Poppins } from "next/font/google";
+
+const poppinsFont = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
   title: {
@@ -23,13 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${poppinsFont.className}`}
+    >
       <body>
         <ThemeProvider
           attribute="class"

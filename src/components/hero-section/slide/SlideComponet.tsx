@@ -1,10 +1,7 @@
 import Image from "next/image";
+import { SlideProps } from "@/interfaces/Props";
 
-interface propsType {
-  img: string;
-}
-
-const SlideComponent: React.FC<propsType> = ({ img }) => {
+const SlideComponent: React.FC<SlideProps> = ({ img }) => {
   return (
     <section className="outline-none border-none relative ">
       <section className="absolute left-[30px] md:left-[70px] max-w-[250px] sm:max-w-[350px] top-[50%] -translate-y-[50%] space-y-2 lg:space-y-4 sm:bg-transparent p-4 sm:p-0 rounded-lg sm:rounded-none"></section>

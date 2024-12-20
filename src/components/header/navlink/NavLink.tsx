@@ -1,11 +1,6 @@
 import Link from "next/link";
 import { links } from "../data/data";
-
-interface NavLinkProps {
-  isMenuOpen: boolean;
-  pathName: string;
-  cartLenght: number;
-}
+import { NavLinkProps } from "@/interfaces/Props";
 
 const NavLink: React.FC<NavLinkProps> = ({
   isMenuOpen,
