@@ -20,7 +20,7 @@ const Testimonial = () => {
     discount_section;
 
   return (
-    <section className="container py-16">
+    <section className="container py-16" aria-label="Testimonial Section">
       <h2 className="font-medium text-2xl pb-4">{section_heading}</h2>
       <section className="grid grid-cols-1 lg:grid-cols-[20%,80%] gap-4">
         {/* Left Section */}

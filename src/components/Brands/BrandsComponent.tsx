@@ -3,7 +3,7 @@ import { brand_logo } from "./data";
 
 const BrandsComponent = () => {
   return (
-    <section className="bg-[#EEF4F5]">
+    <section className="bg-[#EEF4F5]" aria-label="Brands Section">
       <section className="container flex flex-wrap justify-between items-center p-4 mb-2">
         {brand_logo.map((item) => (
           <Image
