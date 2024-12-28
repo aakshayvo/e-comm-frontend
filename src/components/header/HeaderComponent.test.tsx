@@ -11,15 +11,21 @@ jest.mock("../../store/cartStore", () => ({
   useCartStore: jest.fn(),
 }));
 
-jest.mock("./navlink/NavLink", () => (props: any) => (
-  <div data-testid="nav-link" data-ismenuopen={props.isMenuOpen}>
-    {JSON.stringify(props)}
-  </div>
-));
+jest.mock("./navlink/NavLink", () => {
+  const MockNavLink = (props: any) => (
+    <div data-testid="nav-link" data-ismenuopen={props.isMenuOpen}>
+      {JSON.stringify(props)}
+    </div>
+  );
+  MockNavLink.displayName = "NavLinkMock"; // Set display name
+  return MockNavLink;
+});
 
-jest.mock("./ToggleComponent", () => ({
-  ModeToggle: () => <div data-testid="mode-toggle">ModeToggle</div>,
-}));
+jest.mock("./ToggleComponent", () => {
+  const MockModeToggle = () => <div data-testid="mode-toggle">ModeToggle</div>;
+  MockModeToggle.displayName = "ModeToggleMock"; // Set display name
+  return { ModeToggle: MockModeToggle };
+});
 
 describe("HeaderComponent", () => {
   const mockPathname = "/home";

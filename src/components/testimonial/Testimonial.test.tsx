@@ -7,9 +7,13 @@ import {
 } from "./data/data";
 
 // Mock Next.js Image Component
-jest.mock("next/image", () => (props: any) => {
-  const { src, alt, ...rest } = props;
-  return <img src={src} alt={alt} {...rest} />;
+jest.mock("next/image", () => {
+  const MockNextImage = (props: any) => {
+    const { src, alt, ...rest } = props;
+    return <img src={src} alt={alt} {...rest} />;
+  };
+  MockNextImage.displayName = "NextImageMock"; // Set display name
+  return MockNextImage;
 });
 
 describe("Testimonial Component", () => {

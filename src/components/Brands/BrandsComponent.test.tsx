@@ -2,9 +2,13 @@ import { render, screen } from "@testing-library/react";
 import BrandsComponent from "./BrandsComponent";
 import { brand_logo } from "./data";
 
-jest.mock("next/image", () => (props: any) => {
-  const { src, alt, ...rest } = props;
-  return <img src={src} alt={alt} {...rest} />;
+jest.mock("next/image", () => {
+  const MockImage = (props: any) => {
+    const { src, alt, ...rest } = props;
+    return <img src={src} alt={alt} {...rest} />;
+  };
+  MockImage.displayName = "NextImageMock"; // Set the display name
+  return MockImage;
 });
 
 describe("Brands Component", () => {
