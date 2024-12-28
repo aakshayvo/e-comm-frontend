@@ -18,13 +18,15 @@ const CartPage = () => {
             {cart.map((item) => (
               <li key={item.slug.current} className="flex items-center mb-4">
                 <section className="w-20 h-20 mr-4">
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    width={80}
-                    height={80}
-                    className="object-cover rounded-md"
-                  />
+                  <div className="relative w-20 h-20">
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.title}
+                      fill
+                      sizes="(max-width: 640px) 5rem, (max-width: 1024px) 5rem, 5rem"
+                      className="object-cover rounded-md "
+                    />
+                  </div>
                 </section>
 
                 <section className="flex-1">

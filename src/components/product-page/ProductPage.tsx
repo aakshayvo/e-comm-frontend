@@ -13,6 +13,7 @@ const ProductPage: React.FC<ProductProps> = ({
   discountedPrice,
   slug,
   price,
+  isNew,
 }) => {
   const { addToCart } = useCartStore();
 
@@ -28,7 +29,10 @@ const ProductPage: React.FC<ProductProps> = ({
     });
   };
   return (
-    <section className="flex flex-col lg:items-start md:items-center lg:flex-row gap-8 my-4">
+    <section
+      className="flex flex-col lg:items-start md:items-center lg:flex-row gap-8 my-4"
+      aria-label="Product Page"
+    >
       <div
         className="w-full sm:w-[400px] h-[300px]  md:h-[400px] relative  {
         
@@ -38,8 +42,9 @@ const ProductPage: React.FC<ProductProps> = ({
           src={imageUrl}
           alt={title}
           fill
-          priority
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          placeholder="blur"
+          blurDataURL={imageUrl}
         />
       </div>
 

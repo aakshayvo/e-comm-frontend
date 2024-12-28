@@ -29,7 +29,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
   };
 
   return (
-    <div className="h-[550px] border max-w-sm rounded-lg p-2 flex flex-col">
+    <div
+      className="h-[550px] border max-w-sm rounded-lg p-2 flex flex-col"
+      aria-label="product-card"
+    >
       <Link href={`/products/${slug.current}`} className="flex-1">
         {/* Image */}
         <div className="relative h-64 w-full bg-gray-100">

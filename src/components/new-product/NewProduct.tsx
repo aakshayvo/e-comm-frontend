@@ -9,7 +9,7 @@ const NewProduct = () => {
   if (error) return <h2>Error fetching data</h2>;
 
   return (
-    <section className="container pt-16">
+    <section className="container pt-16" aria-label="New Products Section">
       <h2 className="font-medium text-2xl pb-4">New Products</h2>
       {loading && (
         <section className=" flex flex-wrap justify-center lg:justify-between items-center gap-10">
